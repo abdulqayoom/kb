@@ -1,0 +1,52 @@
+<div class="example-wrap">
+    <form [formGroup]="employeeform" class="k-form k-form-md">
+        <fieldset class="k-form-fieldset">
+            <legend>Employee Form</legend>
+            <kendo-formfield>
+                <kendo-label labelCssClass="k-form-label" for="employeefield1" text="firstName"></kendo-label>
+                <input formControlName="firstName" #employeefield1 kendoTextBox required />
+                <kendo-formhint>Your first name</kendo-formhint>
+                <kendo-formerror>Error: First name is required</kendo-formerror>
+            </kendo-formfield>
+            <kendo-formfield>
+                <kendo-label labelCssClass="k-form-label" for="employeefield2" text="lastName"></kendo-label>
+                <input formControlName="lastName" #employeefield2 kendoTextBox required />
+                <kendo-formhint>Your lastName name</kendo-formhint>
+                <kendo-formerror>Error: lastName name is required</kendo-formerror>
+            </kendo-formfield>
+
+        </fieldset>
+
+        <kendo-formfield>
+            <kendo-label labelCssClass="k-form-label" [for]="birthDate" [optional]="true"
+                text="Birth Date"></kendo-label>
+            <kendo-datepicker #birthDate formControlName="birthDate">
+            </kendo-datepicker>
+
+            <kendo-formhint>Your birth date</kendo-formhint>
+        </kendo-formfield>
+        <kendo-formfield>
+            <kendo-label labelCssClass="k-form-label" [for]="email" text="Email"></kendo-label>
+            <input formControlName="email" kendoTextBox #email required />
+
+            <kendo-formhint>Your active email</kendo-formhint>
+            <kendo-formerror>Error: Not valid email format</kendo-formerror>
+        </kendo-formfield>
+        <kendo-formfield>
+            <div class="k-checkbox-wrap">
+                <input #acceptNews type="checkbox" kendoCheckBox formControlName="acceptNews" />
+                <kendo-label [for]="acceptNews" class="k-checkbox-label"
+                    text="I want to receive notifications"></kendo-label>
+            </div>
+
+            <kendo-formhint>You will receive our latest updates and promotions on your
+                email</kendo-formhint>
+        </kendo-formfield>
+        <div class="k-form-buttons">
+            <button kendoButton themeColor="primary" (click)="submitForm()">
+                Submit
+            </button>
+            <button kendoButton (click)="clearForm()">Clear</button>
+        </div>
+    </form>
+</div>

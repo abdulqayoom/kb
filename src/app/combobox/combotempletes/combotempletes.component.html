@@ -1,0 +1,14 @@
+<div class="example-wrapper">
+    <kendo-combobox
+      [data]="listItems"
+      textField="text"
+      valueField="value"
+      [value]="selectedValue"
+      [valuePrimitive]="true"
+    >
+      <ng-template kendoComboBoxItemTemplate let-dataItem>
+        <span class="template">{{ dataItem.value }}</span>
+        {{ dataItem.text }}
+      </ng-template>
+    </kendo-combobox>
+  </div>

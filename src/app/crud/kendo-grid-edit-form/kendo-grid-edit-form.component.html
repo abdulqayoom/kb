@@ -1,0 +1,39 @@
+<kendo-dialog *ngIf="active" [width]="300" [height]="450" (close)="closeForm()">
+    <kendo-dialog-titlebar>
+        {{ isNew ? "Add new product" : "Edit product" }}
+    </kendo-dialog-titlebar>
+
+    <form novalidate class="k-form k-form-md" [formGroup]="editForm">
+        <kendo-label text="UserID">
+            <kendo-combobox [data]="lisItem" textField="name" valueField="id" formControlName="userId"
+                [valuePrimitive]="true">
+            </kendo-combobox>
+        </kendo-label>
+
+        <kendo-formfield>
+            <kendo-label [for]="title" text="title" labelCssClass="k-form-label"></kendo-label>
+            <kendo-textbox #title formControlName="title" required></kendo-textbox>
+
+            <kendo-formhint>Type title</kendo-formhint>
+            <kendo-formerror>Error: title is required</kendo-formerror>
+        </kendo-formfield>
+
+        <kendo-formfield>
+            <kendo-label [for]="body" text="body" labelCssClass="k-form-label"></kendo-label>
+            <kendo-textarea #body formControlName="title" required></kendo-textarea>
+
+            <kendo-formhint>Type body</kendo-formhint>
+            <kendo-formerror>body</kendo-formerror>
+        </kendo-formfield>
+    </form>
+
+    <kendo-dialog-actions layout="start">
+        <button kendoButton themeColor="primary" [svgIcon]="saveIcon" [disabled]="!editForm.valid"
+            (click)="onSave($event)">
+            Save
+        </button>
+        <button kendoButton [svgIcon]="cancelIcon" (click)="onCancel($event)">
+            Cancel
+        </button>
+    </kendo-dialog-actions>
+</kendo-dialog>

@@ -1,0 +1,13 @@
+.template {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+}
+
+kendo-combobox {
+    width: 170px;
+}

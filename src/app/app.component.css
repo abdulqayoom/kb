@@ -1,0 +1,15 @@
+/* Custom styles for the navigation bar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Add padding to the content area */
+.container {
+    padding-top: 20px;
+}
+
+/* Center align text in the content area */
+.container h1,
+.container p {
+    text-align: center;
+}

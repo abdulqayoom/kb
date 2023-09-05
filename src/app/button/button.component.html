@@ -1,0 +1,67 @@
+<div class="example-wrapper">
+    <div class="example-col">
+      <p>Button</p>
+      <button kendoButton (click)="onButtonClick()">Default</button>
+      <button kendoButton (click)="onButtonClick()" themeColor="primary">
+        Primary
+      </button>
+      <button kendoButton (click)="onButtonClick()" [disabled]="true">
+        Disabled
+      </button>
+    </div>
+    <div class="example-col">
+      <p>ButtonGroup</p>
+      <kendo-buttongroup>
+        <button kendoButton [toggleable]="true">Option A</button>
+        <button kendoButton [toggleable]="true">Option B</button>
+        <button kendoButton [toggleable]="true">Option C</button>
+      </kendo-buttongroup>
+    </div>
+    <div class="example-col">
+      <p>DropDownButton</p>
+      <kendo-dropdownbutton
+        [data]="dropDownButtonItems"
+        [svgIcon]="gearSVG"
+        title="User Settings"
+        (itemClick)="onSplitButtonItemClick($event)"
+      >
+        User Settings
+      </kendo-dropdownbutton>
+    </div>
+    <div class="example-col">
+      <p>SplitButton</p>
+      <kendo-splitbutton
+        [data]="splitButtonItems"
+        [svgIcon]="clipboardSVG"
+        title="Paste"
+        (itemClick)="onSplitButtonItemClick($event)"
+        (buttonClick)="onSplitButtonClick()"
+      >
+        Paste
+      </kendo-splitbutton>
+    </div>
+    <div class="example-col">
+      <p>Chip</p>
+      <kendo-chip-list selection="multiple">
+        <kendo-chip
+          *ngFor="let chip of chips"
+          [label]="chip.label"
+          [svgIcon]="chip.svgIcon"
+        ></kendo-chip>
+      </kendo-chip-list>
+    </div>
+    <div class="example-col">
+      <kendo-floatingactionbutton
+        [svgIcon]="plusSVG"
+        text="Add New"
+        title="Add New"
+        [align]="{ horizontal: 'start', vertical: 'bottom' }"
+        (click)="onFabClick()"
+      >
+      </kendo-floatingactionbutton>
+    </div>
+    <div class="example-col">
+      <kendo-floatingactionbutton [svgIcon]="shareSVG" [dialItems]="fabItems">
+      </kendo-floatingactionbutton>
+    </div>
+  </div>

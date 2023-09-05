@@ -1,0 +1,8 @@
+<kendo-grid [data]="gridView" [pageSize]="pageSize" [pageable]="true" (pageChange)="pageChange($event)"
+    [sortable]="true" [filterable]="true" [groupable]="true" [height]="420">
+    <kendo-grid-column field="id" title="ID" filter="numeric"> </kendo-grid-column>
+    <kendo-grid-column field="name" title="Name"> </kendo-grid-column>
+    <kendo-grid-column field="username" title="Uname">
+    </kendo-grid-column>
+    <kendo-grid-column field="email" title="email"> </kendo-grid-column>
+</kendo-grid>

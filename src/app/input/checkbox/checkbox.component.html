@@ -1,0 +1,21 @@
+<div class="section">
+    <h5>Association with native HTML label</h5>
+    <div class="wrap">
+      <label class="k-checkbox-label" for="terms"
+        >I accept Terms&Conditions</label
+      >
+      <input type="checkbox" id="terms" kendoCheckBox />
+    </div>
+  </div>
+
+  <div class="section">
+    <h5>Association with the Label component</h5>
+    <div class="wrap">
+      <kendo-label
+        class="k-checkbox-label"
+        [for]="terms"
+        text="I accept Terms&Conditions"
+      ></kendo-label>
+      <input type="checkbox" #terms kendoCheckBox />
+    </div>
+  </div>

@@ -1,0 +1,27 @@
+<kendo-grid [data]="view | async" [pageSize]="gridState.take" [skip]="gridState.skip" [sort]="gridState.sort"
+    [pageable]="true" [sortable]="true" (add)="addHandler()" (edit)="editHandler($event)"
+    (remove)="removeHandler($event)" (dataStateChange)="onStateChange($event)">
+    <ng-template kendoGridToolbarTemplate>
+        <button kendoGridAddCommand>Add new</button>
+    </ng-template>
+    <kendo-grid-column field="userId" title="userId"></kendo-grid-column>
+    <kendo-grid-column field="id" title="id"></kendo-grid-column>
+    <kendo-grid-column field="title" title="title"></kendo-grid-column>
+    <kendo-grid-column field="body" title="body"></kendo-grid-column>
+    <kendo-grid-command-column title="command" [width]="220">
+        <ng-template kendoGridCellTemplate>
+            <button kendoGridEditCommand [primary]="true">Edit</button>
+            <button kendoGridRemoveCommand>Delete</button>
+        </ng-template>
+    </kendo-grid-command-column>
+    <kendo-grid-command-column title="Scan" [width]="220">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <div class="k-card-body let-dataItem">
+                <kendo-qrcode [value]="dataItem | json" rrorCorrection="M">
+                </kendo-qrcode>
+            </div>
+        </ng-template>
+    </kendo-grid-command-column>
+</kendo-grid>
+<app-kendo-grid-edit-form [model]="editDataItem" [isNew]="isNew" (save)="saveHandler($event)">
+</app-kendo-grid-edit-form>

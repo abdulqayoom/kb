@@ -1,0 +1,6 @@
+<form #form="ngForm">
+    <kendo-label text="Events">
+        <kendo-switch [style.marginBottom.px]="10" [(ngModel)]="checked" (focus)="onFocus()" (blur)="onBlur()"
+            (valueChange)="onChange($event)"></kendo-switch>
+    </kendo-label>
+</form>

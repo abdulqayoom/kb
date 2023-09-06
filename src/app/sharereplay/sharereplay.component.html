@@ -1,0 +1,36 @@
+<div class="container">
+    <legend class="">Share Replay </legend>
+
+    <div class="row mb-3">
+        <div class="col-3">
+            <input type="text" class="form-control" #user>
+        </div>
+        <div class="col-3">
+            <button class=" btn btn-primary" (click)="emittedvalue(user.value)">Add Video</button>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col-4 border ">
+            user 1
+            <ul>
+                <li *ngFor="let i of userList1">{{i}}</li>
+            </ul>
+        </div>
+        <div class="col-4 border my-div">user2
+            <ul>
+                <li *ngFor="let i of userList2">{{i}}</li>
+            </ul>
+            <button class="btn-primary btn">Subscribe</button>
+        </div>
+        <div class="col-4 border my-div"> user 3
+            <ul>
+                <li *ngFor="let i of userList3">{{i}}</li>
+            </ul>
+            {{user2sub}}
+            <button class=" btn p-b-3"
+                [ngClass]="user3sub?'btn-danger':'btn-success'" (click)="subs3()">{{user3sub?'UnSubscribe':'Subscribe'}}</button>
+        </div>
+    </div>
+
+</div>

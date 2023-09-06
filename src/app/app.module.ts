@@ -17,6 +17,13 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { NotificationModule } from '@progress/kendo-angular-notification';
 import { BarcodesModule } from '@progress/kendo-angular-barcodes';
+import { MapopComponent } from './mapop/mapop.component';
+import { SubjectComponent } from './subject/subject.component';
+import { Component1Component } from './component1/component1.component';
+import { Component2Component } from './component2/component2.component';
+import { Component23Component } from './component23/component23.component';
+import SharereplayComponent from './sharereplay/sharereplay.component';
+import { MergeconcatComponent } from './mergeconcat/mergeconcat.component';
 
 
 
@@ -30,7 +37,14 @@ import { BarcodesModule } from '@progress/kendo-angular-barcodes';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapopComponent,
+    SubjectComponent,
+    Component1Component,
+    Component2Component,
+    Component23Component,
+    SharereplayComponent,
+    MergeconcatComponent
   ],
   imports: [
     BrowserModule,

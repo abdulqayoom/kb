@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { PostModel } from '../Model/post';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class postService {
+  username = new BehaviorSubject<string>('initial value');
 
   constructor(private http: HttpClient) { }
   getPosts() {
@@ -27,8 +29,7 @@ export class postService {
     debugger
     return this.http.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
   }
-  getusers()
-  {
+  getusers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 

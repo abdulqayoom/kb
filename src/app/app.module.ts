@@ -24,6 +24,7 @@ import { Component2Component } from './component2/component2.component';
 import { Component23Component } from './component23/component23.component';
 import SharereplayComponent from './sharereplay/sharereplay.component';
 import { MergeconcatComponent } from './mergeconcat/mergeconcat.component';
+import { ShareReplayComponent } from './share-replay/share-replay.component';
 
 
 
@@ -44,7 +45,8 @@ import { MergeconcatComponent } from './mergeconcat/mergeconcat.component';
     Component2Component,
     Component23Component,
     SharereplayComponent,
-    MergeconcatComponent
+    MergeconcatComponent,
+    ShareReplayComponent
   ],
   imports: [
     BrowserModule,

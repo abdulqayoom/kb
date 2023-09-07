@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-4">
+            <div class="example-config">Selected category</div>
+            <kendo-combobox [data]="listItems" [(ngModel)]="selectedValue" [filterable]="true"
+                (valueChange)="handleFilter($event)" [valuePrimitive]="true"></kendo-combobox>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="card" style="width: 18rem; " *ngFor="let item of data">
+            <img class="card-img-top" src='{{item.thumbnail}}' alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.description}}</p>
+
+            </div>
+        </div>
+
+
+
+    </div>

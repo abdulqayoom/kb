@@ -4,12 +4,14 @@ import { MapopComponent } from './mapop/mapop.component';
 import { SubjectComponent } from './subject/subject.component';
 import SharereplayComponent from './sharereplay/sharereplay.component';
 import { MergeconcatComponent } from './mergeconcat/mergeconcat.component';
+import { ShareReplayComponent } from './share-replay/share-replay.component';
 
 const routes: Routes = [
   { path: 'map', component: MapopComponent },
   { path: 'subject', component: SubjectComponent },
   { path: 'sp', component: SharereplayComponent },
   { path: 'merge', component: MergeconcatComponent },
+  { path: 'share', component: ShareReplayComponent },
   { path: 'users', loadChildren: () => import('./user/user.module').then(m => m.UserModule) }, { path: 'posts', loadChildren: () => import('./post/post.module').then(m => m.PostModule) }, { path: 'combobox', loadChildren: () => import('./combobox/combobox.module').then(m => m.ComboboxModule) },
   { path: 'grid', loadChildren: () => import('./grid/grid.module').then(m => m.GridModule1) },
   { path: 'button', loadChildren: () => import('./button/button.module').then(m => m.ButtonModule) },
